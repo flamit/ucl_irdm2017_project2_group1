@@ -156,3 +156,5 @@ def make_rank_data_csv(fpath, fold_no, dataset):
             data[column] = data[column].map(lambda x: x.split(':')[-1])
 
         data.to_csv("{fpath}/{dataset}_fld{fold_no}_df.csv".format(fpath=fpath, dataset=dataset, fold_no=fold_no))
+        
+        return data

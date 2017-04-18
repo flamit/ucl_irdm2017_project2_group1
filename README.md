@@ -52,6 +52,7 @@ We have included a number of 'plug and play' notebooks, demonstrating how our mo
 
 ## Acknowledgments
 
-* Microsoft MSLR-10K dataset
+* [Microsoft MSLR-10K dataset](https://www.microsoft.com/en-us/research/project/mslr/)
+* The Lemur project
 * Our logistic regression classifier is based on:
 * Our deep neural network is based on: 

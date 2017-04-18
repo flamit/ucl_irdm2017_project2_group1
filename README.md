@@ -55,4 +55,4 @@ We have included a number of 'plug and play' notebooks, demonstrating how our mo
 * [Microsoft MSLR-10K dataset](https://www.microsoft.com/en-us/research/project/mslr/)
 * The Lemur project
 * Our logistic regression classifier is based on:
-* Our deep neural network is based on: 
+* Our deep neural network is based on: the 'Deep Neural Networks for YouTube Recommendations' paper by P. Covington, J. Adams, E. Sargin

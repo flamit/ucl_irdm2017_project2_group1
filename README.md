@@ -53,6 +53,6 @@ We have included a number of 'plug and play' notebooks, demonstrating how our mo
 ## Acknowledgments
 
 * [Microsoft MSLR-10K dataset](https://www.microsoft.com/en-us/research/project/mslr/)
-* The Lemur project
-* Our logistic regression classifier is based on:
-* Our deep neural network is based on: the 'Deep Neural Networks for YouTube Recommendations' paper by P. Covington, J. Adams, E. Sargin
+* The Lemur project - [RankLib](https://sourceforge.net/p/lemur/wiki/RankLib/)
+* Our logistic regression classifier is based on: Li, P., Burges, C. and Wu, Q. 2007. McRank: Learning to rank using multiple classification and gradient boosting. *NIPS'07 Proceedings of the 20th International Conference on Neural Information Processing Systems*. 2007: 897-904
+* Our deep neural network is based on: Covington, P., Adams, J. and Sargin, E. 2016. Deep Neural Networks for YouTube Recommendations. *RecSys '16 Proceedings of the 10th ACM Conference on Recommender Systems*. 2016: 191-198

@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* python 3
+* python
 * numpy
 * pandas
 * matplotlib
@@ -26,24 +26,24 @@ https://github.com/gpeake/ucl_irdm2017_project2_group1
 
 ### Modules
 
-`data_load.py` contains a function to convert the MSLR-10K text files into Pandas dataframes and save as CSVs. This function only needs to be run once, after which the CSV files can be directly loaded.
-`logistic_classifier` contains functions required to train our logistic regression classifier.
-`evals.py` contains functions to evaluate our models: DCG@N, NDCG@N, ERR
+* `data_load.py` contains a function to convert the MSLR-10K text files into Pandas dataframes and save as CSVs. This function only needs to be run once, after which the CSV files can be directly loaded.
+* `logistic_classifier` contains functions required to train our logistic regression classifier.
+* `evals.py` contains functions to evaluate our models: DCG@N, NDCG@N, ERR
 
 ### Notebooks
 
 We have included a number of 'plug and play' notebooks, demonstrating how our models can be used to predict rankings for the MSLR-10K dataset and how to evaluate the results.
 
-`data_exploration`
-`logistic_regression_classifier` 
-`deep_neural_network`
+* `data_exploration`
+* `logistic_regression_classifier` 
+* `deep_neural_network`
 
 ## Authors
 
-* **Benjamin Ajayi-Obe
-* **Georgina Peake
-* **Amy Roberts
-* **Ruadhan Stokes
+* **Benjamin Ajayi-Obe**
+* **Georgina Peake**
+* **Amy Roberts**
+* **Ruadhan Stokes**
 
 
 ## License

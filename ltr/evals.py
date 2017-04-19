@@ -100,3 +100,17 @@ def mean_err(data):
     for qid,_ in data:
         err_list.append(err(ltr.logistic_classifier.rank_query(data=data, qid=qid), rank=10))
     return np.mean(err_list)
+
+def accuracy(opt_probs,y_true):
+    """
+    Description:
+    Computes the proportion of correctly predicted relevance labels (i.e. true label = predicted label)
+    
+    Inputs:
+    opt_probs - optimal relevance class probabilities after training
+    y_true - true relevance class labels
+    
+    """
+    y_pred = np.argmax(opt_probs,axis=1)
+    accuracy = sum(y_pred == y_true)/(float(len(y_true)))
+    return accuracy

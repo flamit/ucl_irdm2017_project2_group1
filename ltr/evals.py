@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import math
-import ltr.logistic_classifier
+import ltr.utils
 
 
 def dcg_at_rank_N(r, rank=10, non_linear_gain='y'):
@@ -47,7 +47,7 @@ def ndcg_at_rank_N(r, rank=10, non_linear_gain='y'):
     else:
         return 0
 
-def mean_ndcg(data, rank=10, non_linear_gain='y'):
+def mean_ndcg(data, sort_cols, rank=10, non_linear_gain='y'):
     """
     Description: Average (mean) of Normalized Discounted Cumulative Gain (NDGC)
         across all queries in data
@@ -56,11 +56,12 @@ def mean_ndcg(data, rank=10, non_linear_gain='y'):
     data - Pandas Dataframe with columns {qid, label_true, ERel}, grouped by qid
     rank - Top [rank] number of results to use
     non_linear_gain - flag (y/n) for whether to use a non_linear gain function
+    sort_cols: str or list of columns to sort by, in order of sorting preference 
     
     """
     ndcg_list = []
     for qid,_ in data:
-        ndcg_list.append(ndcg_at_rank_N(ltr.logistic_classifier.rank_query(data=data, qid=qid), rank, non_linear_gain))
+        ndcg_list.append(ndcg_at_rank_N(ltr.utils.rank_query(data=data, qid=qid, sort_cols=sort_cols), rank, non_linear_gain))
     return np.mean(ndcg_list)
 
 def err(r, rank=10):
@@ -88,17 +89,18 @@ def err(r, rank=10):
         
     return ERR
 
-def mean_err(data):
+def mean_err(data, sort_cols):
     """
     Description: Average (mean) of Expected Reciprocal Rank
     
     Inputs:
     data - Pandas Dataframe with columns {qid, label_true, ERel}, grouped by qid
+    sort_cols: str or list of columns to sort by, in order of sorting preference 
     
     """
     err_list = []
     for qid,_ in data:
-        err_list.append(err(ltr.logistic_classifier.rank_query(data=data, qid=qid), rank=10))
+        err_list.append(err(ltr.utils.rank_query(data=data, qid=qid, sort_cols=sort_cols), rank=10))
     return np.mean(err_list)
 
 def accuracy(opt_probs,y_true):

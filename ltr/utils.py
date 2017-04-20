@@ -3,8 +3,8 @@ import numpy as np
 
 def rank_query(data, qid, sort_cols):
     """
-    Description: Generates a list of the true labels, ranked by their expected relevance
-    for the specified query
+    Description: Generates a list of the true labels, ranked by their expected relevance or 
+    by label then confidence for the specified query
     
     Inputs:
         data: Pandas Dataframe with columns {qid, label_true, ERel}, grouped by qid

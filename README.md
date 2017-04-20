@@ -40,6 +40,32 @@ For details on how install **tensorflow**, please see: https://www.tensorflow.or
 
 For Python package installations in general, please see: https://packaging.python.org/installing/
 
+### File Structure
+```
+├── input
+│   └──MLSR-WEB10K
+│
+├── output
+│   └──saved_models
+│
+├── ucl_irdm2017_project2_group1
+│   │  
+│   ├── ltr
+│   │   ├── __init__.py
+│   │   ├── data_load.py
+│   │   ├── evals.py
+│   │   └── utils.py
+│   │  
+│   ├── models
+│   │   ├── L1_logistic.pkl
+│   │   └── ardFit.pkl
+│   │  
+│   ├── notebooks
+│   │   ├── data_exploration.ipynb
+│   │   ├── deep_nn.ipynb
+│   │   └── logistic_regression_classifier.ipynb
+```
+
 
 ## Usage
 
